@@ -9,7 +9,7 @@ const LenisScroll = () => {
       lerp: 0.1,
       duration: 1.2,
       smoothWheel: true,
-      smoothTouch: false,
+      syncTouch: false,
     });
 
     let animationFrame: number;
@@ -31,4 +31,3 @@ const LenisScroll = () => {
 };
 
 export default LenisScroll;
-

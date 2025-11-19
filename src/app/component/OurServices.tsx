@@ -12,6 +12,7 @@ import {
   Zap,
   ArrowRight,
   CheckCircle2,
+  Lightbulb,
 } from "lucide-react";
 import React from "react";
 
@@ -27,80 +28,85 @@ interface Service {
 const services: Service[] = [
   {
     id: 1,
-    icon: <ShoppingCart className="w-6 h-6" />,
-    title: "E-Commerce Development",
+    icon: <ShoppingCart className="h-6 w-6" />,
+    title: "Store Setup & Research",
     description:
       "Custom online stores built with cutting-edge technology for seamless shopping experiences.",
     features: [
-      "Custom store design",
-      "Payment integration",
-      "Inventory management",
-      "Mobile responsive",
+      "Niche Research",
+      "Brand Research",
+      "Product Research",
+      "Product Listing & Optimization",
     ],
     color: "text-blue-500",
   },
   {
     id: 2,
-    icon: <Code className="w-6 h-6" />,
-    title: "Web Development",
+    icon: <Code className="h-6 w-6" />,
+    title: "Store Design & Branding",
     description:
       "High-performance websites and web applications tailored to your business needs.",
     features: [
-      "Modern frameworks",
-      "SEO optimized",
-      "Fast loading",
-      "Scalable architecture",
+      "Theme Importation & Customization",
+      "Full Store Design",
+      "Branded Checkout Customization",
+      "Favicon Creation & Upload",
     ],
     color: "text-purple-500",
   },
   {
     id: 3,
-    icon: <Rocket className="w-6 h-6" />,
-    title: "Launch & Strategy",
+    icon: <Rocket className="h-6 w-6" />,
+    title: "Store Policies & Verification",
     description:
       "Complete launch strategies to get your business online and growing fast.",
     features: [
-      "Go-to-market plan",
-      "Brand positioning",
-      "Launch campaigns",
-      "Growth strategies",
+      "Store Policies Setup",
+      "Licensing & Store Verificatio",
+      "Trusted Site & Trust Badge Integration",
     ],
     color: "text-orange-500",
   },
   {
     id: 4,
-    icon: <BarChart3 className="w-6 h-6" />,
-    title: "Analytics & Optimization",
+    icon: <Lightbulb className="h-6 w-6" />,
+    title: "Store Optimization",
     description:
       "Data-driven insights to optimize performance and maximize conversions.",
     features: [
-      "Performance tracking",
-      "Conversion optimization",
-      "A/B testing",
-      "Custom reports",
+      "Website Speed Optimization",
+      "Overall Store Optimization (UI/UX & Conversion)",
+      "One-Page Checkout Setup",
+      "Abandoned Checkout Recovery",
     ],
     color: "text-green-500",
   },
   {
     id: 5,
-    icon: <Palette className="w-6 h-6" />,
-    title: "UI/UX Design",
+    icon: <Palette className="h-6 w-6" />,
+    title: "SEO & Content",
     description:
       "Beautiful, intuitive designs that engage users and drive conversions.",
-    features: ["User research", "Wireframing", "Prototyping", "Design systems"],
+    features: [
+      "Search Engine Optimization (SEO)",
+      "Meta Description Optimization",
+      "Blog Post Creation",
+      "Sitemap Setup",
+    ],
     color: "text-pink-500",
   },
   {
     id: 6,
-    icon: <Zap className="w-6 h-6" />,
-    title: "Maintenance & Support",
+    icon: <Zap className="h-6 w-6" />,
+    title: "Marketing & Ads",
     description:
       "Ongoing support to keep your platform running smoothly and securely.",
     features: [
-      "24/7 monitoring",
-      "Security updates",
-      "Performance tuning",
-      "Technical support",
+      "Email Campaign Setup & Automation",
+      "TikTok Shop Setup & Management",
+      "TikTok Ads Management",
+      "Instagram Shop Setup",
+      "Facebook Ads Management",
     ],
     color: "text-yellow-500",
   },
@@ -108,14 +114,14 @@ const services: Service[] = [
 
 const OurServices = () => {
   return (
-    <section className="py-20 px-3 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-muted/30 px-3 py-20">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-16 border-b-2 pb-6">
+        <div className="mb-16 flex flex-col items-start justify-between gap-6 border-b-2 pb-6 md:flex-row md:items-center">
           <div className="space-y-2">
             <SplitText
               text="Our Services"
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground"
+              className="text-foreground text-4xl font-bold md:text-5xl lg:text-6xl"
               delay={100}
               duration={0.6}
               ease="power3.out"
@@ -126,7 +132,7 @@ const OurServices = () => {
               rootMargin="-100px"
               textAlign="right"
             />
-            <p className="text-muted-foreground text-lg max-w-2xl">
+            <p className="text-muted-foreground max-w-2xl text-lg">
               Comprehensive e-commerce solutions to launch, grow, and scale your
               online business
             </p>
@@ -134,55 +140,55 @@ const OurServices = () => {
           <Button
             variant="default"
             size="lg"
-            className="flex items-center gap-2 shrink-0"
+            className="flex shrink-0 items-center gap-2"
           >
             Get Started
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Card
               key={service.id}
-              className="group overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-border/50 relative"
+              className="group border-border/50 relative cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <CardContent className="p-6">
                 {/* Icon */}
                 <div
-                  className={`w-12 h-12 rounded-xl bg-muted flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${service.color}`}
+                  className={`bg-muted mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110 ${service.color}`}
                 >
                   {service.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-foreground group-hover:text-primary mb-2 text-xl font-bold transition-colors duration-300">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <div className="space-y-2 mb-4">
+                <div className="mb-4 space-y-2">
                   {service.features.map((feature, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                      className="text-muted-foreground flex items-center gap-2 text-sm"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                      <CheckCircle2 className="text-primary h-4 w-4 shrink-0" />
                       <span>{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* CTA */}
-                <div className="flex items-center gap-2 text-sm font-medium text-foreground/60 group-hover:text-foreground transition-colors duration-300 pt-2 border-t border-border/50">
+                <div className="text-foreground/60 group-hover:text-foreground border-border/50 flex items-center gap-2 border-t pt-2 text-sm font-medium transition-colors duration-300">
                   Learn More
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 duration-300" />
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
               </CardContent>
             </Card>

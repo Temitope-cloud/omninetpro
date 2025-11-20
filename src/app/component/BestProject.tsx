@@ -100,9 +100,10 @@ const BestProject = () => {
           <Button
             variant="outline"
             size="lg"
-            className="flex h-auto items-center gap-2 px-8 py-6"
+            className="flex h-auto cursor-pointer items-center gap-2 px-8 py-6"
+            onClick={() => window.open("/about-us", "_blank")}
           >
-            View Full Portfolio
+            Our Approach
             <ExternalLink className="h-4 w-4" />
           </Button>
         </div>

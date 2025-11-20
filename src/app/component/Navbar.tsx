@@ -55,7 +55,7 @@ const Navbar = ({ className }: { className?: React.ReactNode }) => {
       <div
         className={`border-foreground/55 flex items-center justify-between border-b-2 pt-3 pb-2 ${className}`}
       >
-        <div className="pl-5">
+        <div className="cursor-pointer pl-5" onClick={() => router.push("/")}>
           <h1 className="text-foreground text-3xl font-bold uppercase">
             OmninetPro
           </h1>

@@ -7,8 +7,6 @@ import {
   Phone,
   MapPin,
   ArrowRight,
-  Twitter,
-  Linkedin,
   Instagram,
   Github,
   Facebook,
@@ -22,37 +20,49 @@ const Footer = () => {
   const router = useRouter();
 
   const services = [
-    { name: "E-Commerce Development", href: "#" },
-    { name: "Web Development", href: "#" },
-    { name: "UI/UX Design", href: "#" },
-    { name: "Launch & Strategy", href: "#" },
-    { name: "Analytics & Optimization", href: "#" },
-    { name: "Maintenance & Support", href: "#" },
+    { name: "Store Setup", href: "#" },
+    { name: "Branding", href: "#" },
+    { name: "Store Verification", href: "#" },
+    { name: "Store Optimization", href: "#" },
+    { name: "SEO & Content", href: "#" },
+    { name: "Marketing", href: "#" },
   ];
 
   const company = [
-    { name: "About Us", href: "#" },
-    { name: "Our Team", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Case Studies", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Our Team", href: "/#our-team" },
+    { name: "About", href: "/about-us" },
+    { name: "Contact", href: "/contact-us" },
   ];
 
   const resources = [
-    { name: "Documentation", href: "#" },
-    { name: "Help Center", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
+    { name: "Whatsapp", href: "https://wa.me/16833335332" },
+    { name: "Instagram", href: "https://www.instagram.com/proomninet" },
+    { name: "TikTok", href: "www.tiktok.com/@omninetpro" },
+    { name: "Telegram", href: "t.me/john123697" },
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Facebook, href: "#", label: "Facebook" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/proomninet",
+      label: "Instagram",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/proomninet",
+      label: "Instagram",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/proomninet",
+      label: "Instagram",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/proomninet",
+      label: "Instagram",
+    },
   ];
 
   return (
@@ -116,7 +126,7 @@ const Footer = () => {
                   href="mailto:hello@omninetpro.com"
                   className="hover:text-background transition-colors"
                 >
-                  hello@omninetpro.com
+                  support@omninetpro.com
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm">
@@ -125,21 +135,21 @@ const Footer = () => {
                   href="tel:+1234567890"
                   className="hover:text-background transition-colors"
                 >
-                  +1 (234) 567-890
+                  +1 (683) 333-5332
                 </a>
               </div>
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="text-muted-foreground mt-0.5 h-4 w-4 shrink-0" />
                 <span>
-                  123 Business Street,
+                  Westferry Circus,
                   <br />
-                  City, State 12345
+                  4HD, London.
                 </span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 pt-4">
+            {/* <div className="flex items-center gap-4 pt-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -153,26 +163,7 @@ const Footer = () => {
                   </a>
                 );
               })}
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-background mb-4 text-sm font-semibold tracking-wider uppercase">
-              Services
-            </h4>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    href={service.href}
-                    className="text-muted-foreground hover:text-background text-sm transition-colors"
-                  >
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            </div> */}
           </div>
 
           {/* Company */}
@@ -194,10 +185,29 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Services */}
+          <div>
+            <h4 className="text-background mb-4 text-sm font-semibold tracking-wider uppercase">
+              Services
+            </h4>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className="text-muted-foreground hover:text-background text-sm transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Resources */}
           <div>
             <h4 className="text-background mb-4 text-sm font-semibold tracking-wider uppercase">
-              Resources
+              Socials
             </h4>
             <ul className="space-y-3">
               {resources.map((resource) => (

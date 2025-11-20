@@ -87,7 +87,7 @@ const AboutUsSection = () => {
             <span className="text-muted-foreground inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase">
               Welcome to Our Journey
             </span>
-            <h2 className="text-foreground text-4xl leading-snug font-bold md:text-5xl">
+            <h2 className="text-foreground text-4xl leading-snug font-bold">
               Building e-commerce legacies through
               <span className="text-primary"> intentional craftsmanship</span>.
             </h2>
@@ -118,7 +118,7 @@ const AboutUsSection = () => {
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button
               size="lg"
-              className="h-auto px-8 py-6 text-base font-semibold"
+              className="h-auto cursor-pointer px-8 py-6 text-base font-semibold"
               onClick={() => router.push("https://wa.me/16833335332")}
             >
               Join Our Mission
@@ -127,7 +127,7 @@ const AboutUsSection = () => {
             <Button
               variant="outline"
               size="lg"
-              className="h-auto px-8 py-6 text-base font-semibold"
+              className="h-auto cursor-pointer px-8 py-6 text-base font-semibold"
               onClick={() => router.push("/about-us")}
             >
               Explore Our Approach

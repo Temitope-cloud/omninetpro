@@ -42,13 +42,13 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
           <Link href="/" onClick={onClose}>
             Home
           </Link>
-          <Link href="/about" onClick={onClose}>
+          <Link href="/about-us" onClick={onClose}>
             About
           </Link>
-          <Link href="/services" onClick={onClose}>
+          <Link href="/#services" onClick={onClose}>
             Services
           </Link>
-          <Link href="/contact" onClick={onClose}>
+          <Link href="/contact-us" onClick={onClose}>
             Contact
           </Link>
         </nav>

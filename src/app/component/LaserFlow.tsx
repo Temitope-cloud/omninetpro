@@ -3,6 +3,7 @@
 import LaserFlow from "@/components/LaserFlow";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 import React from "react";
 
@@ -68,7 +69,7 @@ export function LaserFlowBoxExample() {
           variant="outline"
           className="mt-5 w-30 cursor-pointer bg-[#5a5086] text-white"
         >
-          Our Services
+          <Link href="/#services"> Our Services </Link>
           <MoveRight />
         </Button>
       </div>

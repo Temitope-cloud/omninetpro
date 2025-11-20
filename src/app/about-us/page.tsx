@@ -5,9 +5,9 @@ const AboutUs = () => {
   return (
     <>
       {/* Hero */}
-      <div className="max-w-340 py-10 mx-auto px-4 sm:px-6 lg:px-8 mb-3">
+      <div className="mx-auto mb-3 max-w-340 px-4 py-10 sm:px-6 lg:px-8">
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+        <div className="grid gap-4 md:grid-cols-2 md:items-center md:gap-8 xl:gap-20">
           <div>
             <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
               Start your journey with{" "}
@@ -19,14 +19,14 @@ const AboutUs = () => {
             </p>
 
             {/* Buttons */}
-            <div className="mt-7 grid gap-3 w-full sm:inline-flex">
+            <div className="mt-7 grid w-full gap-3 sm:inline-flex">
               <a
-                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                className="inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
                 href="#"
               >
                 Get started
                 <svg
-                  className="shrink-0 size-4"
+                  className="size-4 shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -41,7 +41,7 @@ const AboutUs = () => {
                 </svg>
               </a>
               <a
-                className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
+                className="inline-flex items-center justify-center gap-x-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-800 shadow-2xs hover:bg-gray-50 focus:bg-gray-50 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
                 href="#"
               >
                 Contact sales team
@@ -50,7 +50,7 @@ const AboutUs = () => {
             {/* End Buttons */}
 
             {/* Review */}
-            <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">
+            <div className="mt-6 grid grid-cols-2 gap-x-5 lg:mt-10">
               {/* Review */}
               <div className="py-5">
                 <div className="flex gap-x-1">
@@ -273,16 +273,16 @@ const AboutUs = () => {
 
           <div className="relative ms-4">
             <img
-              className="w-full h-154 object-cover rounded-md"
+              className="h-154 w-full rounded-md object-cover"
               src="/liz.jpeg"
               alt="Hero Image"
             />
-            <div className="absolute inset-0 -z-1 bg-linear-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6"></div>
+            <div className="absolute inset-0 -z-1 -ms-4 me-4 mt-4 -mb-4 size-full rounded-md bg-linear-to-tr from-gray-200 via-white/0 to-white/0 lg:-ms-6 lg:me-6 lg:mt-6 lg:-mb-6"></div>
 
             {/* SVG*/}
-            <div className="absolute bottom-0 start-0">
+            <div className="absolute start-0 bottom-0">
               <svg
-                className="w-2/3 ms-auto h-auto text-white"
+                className="ms-auto h-auto w-2/3 text-white"
                 width="630"
                 height="451"
                 viewBox="0 0 630 451"
@@ -409,11 +409,11 @@ const AboutUs = () => {
       {/*  */}
 
       {/* Icon Blocks */}
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto border-t-2">
+      <div className="mx-auto max-w-340 border-t-2 px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid gap-12 md:grid-cols-2">
           <div className="lg:w-3/4">
-            <h2 className="text-3xl text-gray-800 font-bold lg:text-4xl">
+            <h2 className="text-3xl font-bold text-gray-800 lg:text-4xl">
               Collaborative tools to design better user experience
             </h2>
             <p className="mt-3 text-gray-800">
@@ -423,12 +423,12 @@ const AboutUs = () => {
             </p>
             <p className="mt-5">
               <a
-                className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium"
+                className="inline-flex items-center gap-x-1 text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-hidden"
                 href="#"
               >
                 Contact our team to begin
                 <svg
-                  className="shrink-0 size-4 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1"
+                  className="size-4 shrink-0 transition ease-in-out group-hover:translate-x-1 group-focus:translate-x-1"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -450,9 +450,9 @@ const AboutUs = () => {
             {/* Icon Block */}
             <div className="flex gap-x-5 sm:gap-x-8">
               {/* Icon */}
-              <span className="shrink-0 inline-flex justify-center items-center size-11 rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs mx-auto">
+              <span className="mx-auto inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs">
                 <svg
-                  className="shrink-0 size-5"
+                  className="size-5 shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -468,7 +468,7 @@ const AboutUs = () => {
                 </svg>
               </span>
               <div className="grow">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800">
+                <h3 className="text-base font-semibold text-gray-800 sm:text-lg">
                   Industry-leading documentation
                 </h3>
                 <p className="mt-1 text-gray-600">
@@ -483,9 +483,9 @@ const AboutUs = () => {
             {/* Icon Block */}
             <div className="flex gap-x-5 sm:gap-x-8">
               {/* Icon */}
-              <span className="shrink-0 inline-flex justify-center items-center size-11 rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs mx-auto">
+              <span className="mx-auto inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs">
                 <svg
-                  className="shrink-0 size-5"
+                  className="size-5 shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -501,7 +501,7 @@ const AboutUs = () => {
                 </svg>
               </span>
               <div className="grow">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800">
+                <h3 className="text-base font-semibold text-gray-800 sm:text-lg">
                   Developer community support
                 </h3>
                 <p className="mt-1 text-gray-600">
@@ -516,9 +516,9 @@ const AboutUs = () => {
             {/* Icon Block */}
             <div className="flex gap-x-5 sm:gap-x-8">
               {/* Icon */}
-              <span className="shrink-0 inline-flex justify-center items-center size-11 rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs mx-auto">
+              <span className="mx-auto inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs">
                 <svg
-                  className="shrink-0 size-5"
+                  className="size-5 shrink-0"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -534,7 +534,7 @@ const AboutUs = () => {
                 </svg>
               </span>
               <div className="grow">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800">
+                <h3 className="text-base font-semibold text-gray-800 sm:text-lg">
                   Simple and affordable
                 </h3>
                 <p className="mt-1 text-gray-600">
@@ -555,20 +555,19 @@ const AboutUs = () => {
       {/*  */}
 
       {/* Icon Blocks */}
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="max-w-2xl mx-auto">
+      <div className="mx-auto max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <div className="mx-auto max-w-2xl">
           {/* Grid */}
           <div className="grid gap-12">
             <div>
-              <h2 className="text-3xl text-gray-800 font-bold lg:text-4xl">
+              <h2 className="text-3xl font-bold text-gray-800 lg:text-4xl">
                 Our vision
               </h2>
               <p className="mt-3 text-gray-800">
-                For as long as there have been cities, the public square has
-                been a fundamental part of the urban landscape - an open,
-                approachable space to meet and engage with friends and
-                neighbours. Space aims to capture this spirit of bringing people
-                together in an exciting, welcoming environment.
+                Omninet Pro was built on one simple idea: giving businesses a
+                digital space where their brand can shine. Everything we create
+                is designed to bring clarity, connection, and confidence to your
+                online presence.
               </p>
             </div>
 
@@ -576,7 +575,7 @@ const AboutUs = () => {
               {/* Icon Block */}
               <div className="flex gap-x-5 sm:gap-x-8">
                 <svg
-                  className="shrink-0 mt-2 size-6 text-gray-800"
+                  className="mt-2 size-6 shrink-0 text-gray-800"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -587,23 +586,43 @@ const AboutUs = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-                  <path d="M10 6h4" />
-                  <path d="M10 10h4" />
-                  <path d="M10 14h4" />
-                  <path d="M10 18h4" />
+                  <path d="M3 12h18M3 6h18M3 18h18" />
                 </svg>
                 <div className="grow">
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-                    High quality Co-Living spaces
+                  <h3 className="text-base font-semibold text-gray-800 sm:text-lg">
+                    Cutting-edge web solutions
                   </h3>
                   <p className="mt-1 text-gray-600">
-                    Our fully furnished spaces are designed and purpose-built
-                    with Co-Living in mind, featuring high-end finishes and
-                    amenities that go far beyond traditional apartment
-                    buildings.
+                    We build modern, high-performance websites that help
+                    businesses establish a professional online presence and
+                    engage their audience.
+                  </p>
+                </div>
+              </div>
+              {/* End Icon Block */}
+
+              <div className="flex gap-x-5 sm:gap-x-8">
+                <svg
+                  className="mt-2 size-6 shrink-0 text-gray-800"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 2l3 6 6 .5-4.5 4 1.5 6-5-3-5 3 1.5-6-4.5-4L9 8l3-6z" />
+                </svg>
+                <div className="grow">
+                  <h3 className="text-base font-semibold text-gray-800 sm:text-lg">
+                    Innovative design approach
+                  </h3>
+                  <p className="mt-1 text-gray-600">
+                    Our team focuses on clean, intuitive designs that enhance
+                    user experience and drive meaningful engagement for clients.
                   </p>
                 </div>
               </div>
@@ -612,7 +631,7 @@ const AboutUs = () => {
               {/* Icon Block */}
               <div className="flex gap-x-5 sm:gap-x-8">
                 <svg
-                  className="shrink-0 mt-2 size-6 text-gray-800"
+                  className="mt-2 size-6 shrink-0 text-gray-800"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -623,49 +642,16 @@ const AboutUs = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  <path d="M12 2v20M2 12h20" />
                 </svg>
                 <div className="grow">
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-                    Fostering vibrant communities
+                  <h3 className="text-base font-semibold text-gray-800 sm:text-lg">
+                    Seamless integration
                   </h3>
                   <p className="mt-1 text-gray-600">
-                    Our passion is bringing people together. Beyond creating
-                    beautiful spaces, we provide shared experiences.
-                  </p>
-                </div>
-              </div>
-              {/* End Icon Block */}
-
-              {/* Icon Block */}
-              <div className="flex gap-x-5 sm:gap-x-8">
-                <svg
-                  className="shrink-0 mt-2 size-6 text-gray-800"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M7 10v12" />
-                  <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z" />
-                </svg>
-                <div className="grow">
-                  <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-                    Simple and all-inclusive
-                  </h3>
-                  <p className="mt-1 text-gray-600">
-                    We worry about the details so that our residents don't have
-                    to. From our online application process to simple,
-                    all-inclusive billing we aim to make the living experience
-                    as effortless as possible.
+                    We provide scalable, easy-to-manage solutions with robust
+                    support and documentation, so your website runs smoothly and
+                    efficiently.
                   </p>
                 </div>
               </div>
@@ -680,13 +666,13 @@ const AboutUs = () => {
       {/*  */}
 
       {/* Icon Blocks */}
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-center gap-12">
+      <div className="mx-auto max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+        <div className="grid items-center gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Icon Block */}
           <div>
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
               <svg
-                className="shrink-0 size-6 text-blue-600"
+                className="size-6 shrink-0 text-blue-600"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -704,10 +690,11 @@ const AboutUs = () => {
             </div>
             <div className="mt-5">
               <h3 className="text-lg font-semibold text-gray-800">
-                Responsive
+                Modern Web Design
               </h3>
               <p className="mt-1 text-gray-600">
-                Responsive, and mobile-first project on the web
+                Create visually appealing, high-performance websites that adapt
+                to any device.
               </p>
             </div>
           </div>
@@ -715,9 +702,9 @@ const AboutUs = () => {
 
           {/* Icon Block */}
           <div>
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
               <svg
-                className="shrink-0 size-6 text-blue-600"
+                className="size-6 shrink-0 text-blue-600"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -736,10 +723,11 @@ const AboutUs = () => {
             </div>
             <div className="mt-5">
               <h3 className="text-lg font-semibold text-gray-800">
-                Customizable
+                Flexible & Scalable
               </h3>
               <p className="mt-1 text-gray-600">
-                Components are easily customized and extendable
+                Our components and solutions are built to grow with your
+                business needs.
               </p>
             </div>
           </div>
@@ -747,9 +735,9 @@ const AboutUs = () => {
 
           {/* Icon Block */}
           <div>
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
               <svg
-                className="shrink-0 size-6 text-blue-600"
+                className="size-6 shrink-0 text-blue-600"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -766,10 +754,11 @@ const AboutUs = () => {
             </div>
             <div className="mt-5">
               <h3 className="text-lg font-semibold text-gray-800">
-                Documentation
+                Complete Documentation
               </h3>
               <p className="mt-1 text-gray-600">
-                Every component and plugin is well documented
+                Comprehensive guides and references make implementation and
+                management effortless.
               </p>
             </div>
           </div>
@@ -777,9 +766,9 @@ const AboutUs = () => {
 
           {/* Icon Block */}
           <div>
-            <div className="relative flex justify-center items-center size-12 bg-white rounded-xl before:absolute before:-inset-px before:-z-1 before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600 before:rounded-xl">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
               <svg
-                className="shrink-0 size-6 text-blue-600"
+                className="size-6 shrink-0 text-blue-600"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -796,10 +785,11 @@ const AboutUs = () => {
             </div>
             <div className="mt-5">
               <h3 className="text-lg font-semibold text-gray-800">
-                24/7 Support
+                Reliable Support
               </h3>
               <p className="mt-1 text-gray-600">
-                Contact us 24 hours a day, 7 days a week
+                Our team is available around the clock to help you with any
+                questions or issues.
               </p>
             </div>
           </div>

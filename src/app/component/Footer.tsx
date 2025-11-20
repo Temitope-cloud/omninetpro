@@ -12,11 +12,15 @@ import {
   Instagram,
   Github,
   Facebook,
+  MailCheck,
 } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Footer = () => {
+  const router = useRouter();
+
   const services = [
     { name: "E-Commerce Development", href: "#" },
     { name: "Web Development", href: "#" },
@@ -68,19 +72,21 @@ const Footer = () => {
             </div>
             <div className="flex shrink-0 flex-col gap-4 sm:flex-row">
               <Button
+                size="lg"
+                className="border-border/50 text-background hover:bg-muted/10 flex cursor-pointer items-center gap-2"
+                onClick={() => router.push("/contact-us")}
+              >
+                Contact Us
+                <MailCheck className="h-4 w-4" />
+              </Button>
+              <Button
                 variant="default"
                 size="lg"
                 className="bg-background text-foreground hover:bg-background/90 flex cursor-pointer items-center gap-2"
+                onClick={() => router.push("https://wa.me/16833335332")}
               >
                 Get Started
                 <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button
-                size="lg"
-                className="border-border/50 text-background hover:bg-muted/10 flex cursor-pointer items-center gap-2"
-              >
-                Schedule a Call
-                <Phone className="h-4 w-4" />
               </Button>
             </div>
           </div>

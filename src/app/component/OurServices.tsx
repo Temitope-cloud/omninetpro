@@ -13,7 +13,9 @@ import {
   ArrowRight,
   CheckCircle2,
   Lightbulb,
+  ExternalLink,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface Service {
@@ -113,89 +115,97 @@ const services: Service[] = [
 ];
 
 const OurServices = () => {
+  const router = useRouter();
   return (
-    <section className="bg-muted/30 px-3 py-20">
-      <div className="mx-auto max-w-7xl">
-        {/* Header */}
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 border-b-2 pb-6 md:flex-row md:items-center">
-          <div className="space-y-2">
-            <SplitText
-              text="Our Services"
-              className="text-foreground text-4xl font-bold md:text-5xl lg:text-6xl"
-              delay={100}
-              duration={0.6}
-              ease="power3.out"
-              splitType="chars"
-              from={{ opacity: 0, y: 40 }}
-              to={{ opacity: 1, y: 0 }}
-              threshold={0.1}
-              rootMargin="-100px"
-              textAlign="right"
-            />
-            <p className="text-muted-foreground max-w-2xl text-lg">
-              Comprehensive e-commerce solutions to launch, grow, and scale your
-              online business
-            </p>
-          </div>
-          <Button
-            variant="default"
-            size="lg"
-            className="flex shrink-0 items-center gap-2"
-          >
-            Get Started
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <Card
-              key={service.id}
-              className="group border-border/50 relative cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+    <>
+      <div id="services"></div>
+      <section className="bg-muted/30 px-3 py-20">
+        <div className="mx-auto max-w-7xl">
+          {/* Header */}
+          <div className="mb-16 flex flex-col items-start justify-between gap-6 border-b-2 pb-6 md:flex-row md:items-center">
+            <div className="space-y-2">
+              <SplitText
+                text="Our Services"
+                className="text-foreground text-4xl font-bold md:text-5xl lg:text-6xl"
+                delay={100}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="right"
+              />
+              <p className="text-muted-foreground max-w-2xl text-lg">
+                Comprehensive e-commerce solutions to launch, grow, and scale
+                your online business
+              </p>
+            </div>
+            <Button
+              variant="default"
+              size="lg"
+              className="flex shrink-0 cursor-pointer items-center gap-2"
+              onClick={() => router.push("https://wa.me/16833335332")}
             >
-              <CardContent className="p-6">
-                {/* Icon */}
-                <div
-                  className={`bg-muted mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110 ${service.color}`}
-                >
-                  {service.icon}
-                </div>
+              Get Started
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
 
-                {/* Title */}
-                <h3 className="text-foreground group-hover:text-primary mb-2 text-xl font-bold transition-colors duration-300">
-                  {service.title}
-                </h3>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <Card
+                key={service.id}
+                className="group border-border/50 relative cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              >
+                <CardContent className="p-6">
+                  {/* Icon */}
+                  <div
+                    className={`bg-muted mb-4 flex h-12 w-12 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110 ${service.color}`}
+                  >
+                    {service.icon}
+                  </div>
 
-                {/* Description */}
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                  {service.description}
-                </p>
+                  {/* Title */}
+                  <h3 className="text-foreground group-hover:text-primary mb-2 text-xl font-bold transition-colors duration-300">
+                    {service.title}
+                  </h3>
 
-                {/* Features */}
-                <div className="mb-4 space-y-2">
-                  {service.features.map((feature, index) => (
-                    <div
-                      key={index}
-                      className="text-muted-foreground flex items-center gap-2 text-sm"
-                    >
-                      <CheckCircle2 className="text-primary h-4 w-4 shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
+                  {/* Description */}
+                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
 
-                {/* CTA */}
-                <div className="text-foreground/60 group-hover:text-foreground border-border/50 flex items-center gap-2 border-t pt-2 text-sm font-medium transition-colors duration-300">
-                  Learn More
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  {/* Features */}
+                  <div className="mb-4 space-y-2">
+                    {service.features.map((feature, index) => (
+                      <div
+                        key={index}
+                        className="text-muted-foreground flex items-center gap-2 text-sm"
+                      >
+                        <CheckCircle2 className="text-primary h-4 w-4 shrink-0" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <div
+                    onClick={() => router.push("https://wa.me/16833335332")}
+                    className="text-foreground/60 group-hover:text-foreground border-border/50 flex items-center gap-2 border-t pt-2 text-sm font-medium transition-colors duration-300"
+                  >
+                    Learn More
+                    <ExternalLink className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

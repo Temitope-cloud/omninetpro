@@ -5,7 +5,7 @@ const NavBarTwo = ({ className }: { className?: React.ReactNode }) => {
   const menus = ["Home", "About", "Our services", "Contact"];
   return (
     <nav
-      className={`top-0 left-0 right-0 w-full z-50 flex items-center justify-between   text-muted px-6 md:px-16 lg:px-24 py-4 ${className}`}
+      className={`text-muted top-0 right-0 left-0 z-50 flex w-full items-center justify-between px-6 py-4 md:px-16 lg:px-24 ${className}`}
     >
       <div className="text-xl font-bold text-white uppercase">OmninetPro</div>
       <div className="flex items-center gap-6">
@@ -13,7 +13,7 @@ const NavBarTwo = ({ className }: { className?: React.ReactNode }) => {
           <Link
             key={idx}
             href="#"
-            className="text-sm font-medium hover:text-muted-foreground text-white transition-colors"
+            className="hover:text-muted-foreground text-sm font-medium text-white transition-colors"
           >
             {menu}
           </Link>

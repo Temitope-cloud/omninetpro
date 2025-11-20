@@ -30,7 +30,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     <>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden relative`}
+          className={`${geistSans.variable} ${geistMono.variable} relative overflow-x-hidden antialiased`}
         >
           <LenisScroll />
           {isHomePage ? <NavBarTwo className="absolute" /> : <Navbar />}

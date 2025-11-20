@@ -54,17 +54,19 @@ export function LaserFlowBoxExample() {
       />
 
       <div className="absolute top-20 left-10 w-150">
-        <h2 className="text-5xl md:text-6xl  text-white font-bold">
+        <h2 className="text-3xl font-bold text-white md:text-6xl">
           {" "}
-          E-commerce. Stores. Growth. Simplified.
+          E-commerce. Stores.
+          <br />
+          Growth. Simplified.
         </h2>
-        <p className="text-white mt-2 w-[70%]">
+        <p className="mt-2 w-[60%] text-white">
           Starting an online store doesn’t have to be confusing. We simplify the
           process and walk with you from idea to launch.
         </p>
         <Button
           variant="outline"
-          className="cursor-pointer bg-[#5a5086] text-white w-30 mt-5 "
+          className="mt-5 w-30 cursor-pointer bg-[#5a5086] text-white"
         >
           Our Services
           <MoveRight />
@@ -72,7 +74,7 @@ export function LaserFlowBoxExample() {
       </div>
 
       <div
-        className="bg-[url(/shopify-dash.png)] bg-cover "
+        className="bg-[url(/shopify-dash.png)] bg-cover"
         style={{
           position: "absolute",
           top: "50%",

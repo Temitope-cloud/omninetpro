@@ -4,6 +4,7 @@ import SplitText from "@/components/SplitText";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, ArrowRight, Sparkles, Star, Layers } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface Project {
@@ -13,6 +14,7 @@ interface Project {
   category: string;
   image: string;
   impact: string;
+  link?: string;
   tags: string[];
 }
 
@@ -30,23 +32,25 @@ const featuredProject: Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Luxury Fashion Store",
+    title: "Furniture Store",
     description:
-      "Premium e-commerce platform with curated drops, seamless checkout, and editorial storytelling.",
+      "Premium e-commerce furniture platform with curated drops, seamless checkout, and editorial storytelling.",
     category: "Brand Commerce",
-    image: "/project/1.png",
+    image: "/liz.jpeg",
     impact: "+22% repeat purchases",
     tags: ["Shopify Plus", "Interactive Lookbook"],
+    link: "https://nestnook.net/",
   },
   {
     id: 2,
-    title: "Tech Gadgets Hub",
+    title: "Gym Hub",
     description:
-      "Modern marketplace featuring live inventory, product comparisons, and intelligent bundling.",
+      "Modern gym shop featuring live inventory, product comparisons, and intelligent bundling.",
     category: "Marketplace Build",
     image: "/project/1.png",
     impact: "-34% support tickets",
     tags: ["Multi-vendor", "Automation"],
+    link: "https://www.gymbuddy.co.in/",
   },
 ];
 
@@ -57,24 +61,26 @@ const stats = [
 ];
 
 const BestProject = () => {
+  const router = useRouter();
+
   return (
-    <section className="relative py-24 px-6 md:px-16 lg:px-24 overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-10 right-0 w-[420px] h-[420px] bg-primary/10 blur-[140px]" />
-        <div className="absolute bottom-0 left-0 w-[380px] h-[380px] bg-foreground/5 blur-[110px]" />
+    <section className="relative overflow-hidden px-6 py-24 md:px-16 lg:px-24">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="bg-primary/10 absolute -top-10 right-0 h-[420px] w-[420px] blur-[140px]" />
+        <div className="bg-foreground/5 absolute bottom-0 left-0 h-[380px] w-[380px] blur-[110px]" />
       </div>
 
       <div className="relative space-y-16">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-          <div className="space-y-4 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary font-semibold text-xs tracking-[0.3em] uppercase">
+        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+          <div className="max-w-3xl space-y-4">
+            <div className="border-primary/30 bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-semibold tracking-[0.3em] uppercase">
               Curated Work
-              <Sparkles className="w-4 h-4" />
+              <Sparkles className="h-4 w-4" />
             </div>
             <SplitText
               text="E-commerce experiences crafted for ambitious teams."
-              className="text-4xl md:text-5xl font-bold text-foreground leading-tight"
+              className="text-foreground text-4xl leading-tight font-bold md:text-5xl"
               delay={50}
               duration={0.6}
               ease="power3.out"
@@ -85,7 +91,7 @@ const BestProject = () => {
               rootMargin="-100px"
               textAlign="left"
             />
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground text-lg">
               From high-volume drops to boutique launches, every build combines
               strategic UX, purposeful storytelling, and conversion
               intelligence.
@@ -94,58 +100,62 @@ const BestProject = () => {
           <Button
             variant="outline"
             size="lg"
-            className="flex items-center gap-2 px-8 py-6 h-auto"
+            className="flex h-auto items-center gap-2 px-8 py-6"
           >
             View Full Portfolio
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="h-4 w-4" />
           </Button>
         </div>
 
         {/* Featured Project */}
-        <div className="grid lg:grid-cols-3 gap-8 items-center">
-          <Card className="lg:col-span-2 relative overflow-hidden border-none bg-linear-to-br from-[#0f101a] via-[#1b1530] to-[#020106] text-white">
+        <div className="grid items-center gap-8 lg:grid-cols-3">
+          <Card className="relative overflow-hidden border-none bg-linear-to-br from-[#0f101a] via-[#1b1530] to-[#020106] text-white lg:col-span-2">
             <div className="absolute inset-0">
               <img
                 src={featuredProject.image}
                 alt={featuredProject.title}
-                className="w-full h-full object-cover opacity-30"
+                className="h-full w-full object-cover opacity-30"
               />
             </div>
-            <div className="relative z-10 p-8 space-y-6">
-              <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-white/70">
-                <Layers className="w-4 h-4" />
+            <div className="relative z-10 space-y-6 p-8">
+              <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-white/70 uppercase">
+                <Layers className="h-4 w-4" />
                 {featuredProject.category}
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+              <h3 className="text-3xl leading-tight font-bold md:text-4xl">
                 {featuredProject.title}
               </h3>
-              <p className="text-white/80 text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed text-white/80">
                 {featuredProject.description}
               </p>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary/80">
+              <p className="text-primary/80 text-sm font-semibold tracking-[0.3em] uppercase">
                 {featuredProject.impact}
               </p>
               <div className="flex flex-wrap gap-3">
                 {featuredProject.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-4 py-1 rounded-full border border-white/20 text-xs uppercase tracking-wider text-white/80"
+                    className="rounded-full border border-white/20 px-4 py-1 text-xs tracking-wider text-white/80 uppercase"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Button className="gap-2 text-base px-6 py-5 h-auto">
+              <div className="flex flex-wrap items-center gap-4 pt-4">
+                <Button
+                  className="h-auto gap-2 px-6 py-5 text-base"
+                  onClick={() => router.push("https://haveninabreeze.com/")}
+                >
                   View Case Study
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
                 <Button
                   variant="ghost"
-                  className="gap-2 text-base text-white hover:bg-white/10"
+                  className="cursor-pointer gap-2 rounded border text-base text-white hover:bg-white/10"
+                  onClick={() => router.push("https://wa.me/16833335332")}
                 >
                   Schedule a Walkthrough
-                  <Star className="w-4 h-4" />
+                  <Star className="h-4 w-4" />
                 </Button>
               </div>
             </div>
@@ -156,28 +166,28 @@ const BestProject = () => {
             {projects.map((project) => (
               <Card
                 key={project.id}
-                className="border-foreground/10 bg-background/90 shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="border-foreground/10 bg-background/90 shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="space-y-4 p-6">
                   <div className="flex items-center justify-between gap-4">
-                    <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                    <span className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
                       {project.category}
                     </span>
-                    <span className="text-xs font-semibold text-primary">
+                    <span className="text-primary text-xs font-semibold">
                       {project.impact}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground">
+                  <h3 className="text-foreground text-xl font-bold">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 rounded-full bg-muted text-xs font-semibold text-muted-foreground"
+                        className="bg-muted text-muted-foreground rounded-full px-3 py-1 text-xs font-semibold"
                       >
                         {tag}
                       </span>
@@ -185,10 +195,11 @@ const BestProject = () => {
                   </div>
                   <Button
                     variant="ghost"
-                    className="px-0 text-primary hover:text-primary/80 hover:bg-transparent gap-2"
+                    className="text-primary hover:text-primary/80 cursor-pointer gap-2 px-0 hover:bg-transparent"
+                    onClick={() => router.push(project.link ?? "")}
                   >
                     Explore Project
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="h-4 w-4" />
                   </Button>
                 </CardContent>
               </Card>
@@ -197,14 +208,14 @@ const BestProject = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="p-6 rounded-3xl border border-foreground/10 bg-white/70 dark:bg-foreground/5 backdrop-blur-md text-center shadow-sm"
+              className="border-foreground/10 dark:bg-foreground/5 rounded-3xl border bg-white/70 p-6 text-center shadow-sm backdrop-blur-md"
             >
-              <p className="text-3xl font-bold text-foreground">{stat.value}</p>
-              <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground mt-2">
+              <p className="text-foreground text-3xl font-bold">{stat.value}</p>
+              <p className="text-muted-foreground mt-2 text-xs tracking-[0.4em] uppercase">
                 {stat.label}
               </p>
             </div>

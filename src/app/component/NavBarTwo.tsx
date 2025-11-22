@@ -30,7 +30,7 @@ const NavBarTwo = ({ className }: { className?: React.ReactNode }) => {
         className="cursor-pointer text-xl font-bold text-white uppercase"
         onClick={() => router.push("/")}
       >
-        OmninetPro
+        <img src="/logo-white.png" alt="logo" width={200} height={250} />
       </div>
       <div className="hidden items-center gap-6 md:flex">
         {menus.map((menu, idx) => (

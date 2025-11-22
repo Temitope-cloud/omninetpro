@@ -1,9 +1,42 @@
 import React from "react";
+import Script from "next/script";
+import { Metadata } from "next";
 import Navbar from "../component/Navbar";
+import {
+  generateMetadata as generateSEOMetadata,
+  generateBreadcrumbSchema,
+} from "@/lib/seo";
+
+export const metadata: Metadata = generateSEOMetadata({
+  title: "About Us - Omninet Pro | Our Mission & Vision",
+  description:
+    "Learn about Omninet Pro's mission to deliver cutting-edge digital solutions. We create clean, conversion-focused experiences that help businesses launch fast, scale confidently, and succeed online.",
+  path: "/about-us",
+  keywords: [
+    "about omninet pro",
+    "tech agency mission",
+    "digital transformation company",
+    "web development team",
+    "our vision",
+  ],
+});
 
 const AboutUs = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://omninetpro.com" },
+    { name: "About Us", url: "https://omninetpro.com/about-us" },
+  ]);
+
   return (
     <>
+      {/* Structured Data - Breadcrumbs */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       {/* Hero */}
       <div className="mx-auto mb-3 max-w-340 px-4 py-10 sm:px-6 lg:px-8">
         {/* Grid */}
@@ -11,7 +44,7 @@ const AboutUs = () => {
           <div>
             <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
               Start your journey with{" "}
-              <span className="text-blue-600">OmninetPro</span>
+              <span className="text-[#21178f]">OmninetPro</span>
             </h1>
             <p className="mt-3 text-lg text-gray-800">
               Hand-picked professionals and expertly crafted components,
@@ -21,7 +54,7 @@ const AboutUs = () => {
             {/* Buttons */}
             <div className="mt-7 grid w-full gap-3 sm:inline-flex">
               <a
-                className="inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
+                className="inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-[#21178f] px-4 py-3 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
                 href="#"
               >
                 Get started
@@ -423,8 +456,8 @@ const AboutUs = () => {
             </p>
             <p className="mt-5">
               <a
-                className="inline-flex items-center gap-x-1 text-sm font-medium text-blue-600 decoration-2 hover:underline focus:underline focus:outline-hidden"
-                href="#"
+                className="inline-flex items-center gap-x-1 text-sm font-medium text-[#21178f] decoration-2 hover:underline focus:underline focus:outline-hidden"
+                href="/contact-us"
               >
                 Contact our team to begin
                 <svg
@@ -670,9 +703,9 @@ const AboutUs = () => {
         <div className="grid items-center gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Icon Block */}
           <div>
-            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-[#21178f] before:via-transparent before:to-violet-600">
               <svg
-                className="size-6 shrink-0 text-blue-600"
+                className="size-6 shrink-0 text-[#21178f]"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -702,9 +735,9 @@ const AboutUs = () => {
 
           {/* Icon Block */}
           <div>
-            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-[#21178f] before:via-transparent before:to-violet-600">
               <svg
-                className="size-6 shrink-0 text-blue-600"
+                className="size-6 shrink-0 text-[#21178f]"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -735,9 +768,9 @@ const AboutUs = () => {
 
           {/* Icon Block */}
           <div>
-            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-[#21178f] before:via-transparent before:to-violet-600">
               <svg
-                className="size-6 shrink-0 text-blue-600"
+                className="size-6 shrink-0 text-[#21178f]"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -766,9 +799,9 @@ const AboutUs = () => {
 
           {/* Icon Block */}
           <div>
-            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-blue-600 before:via-transparent before:to-violet-600">
+            <div className="relative flex size-12 items-center justify-center rounded-xl bg-white before:absolute before:-inset-px before:-z-1 before:rounded-xl before:bg-linear-to-br before:from-[#21178f] before:via-transparent before:to-violet-600">
               <svg
-                className="size-6 shrink-0 text-blue-600"
+                className="size-6 shrink-0 text-[#21178f]"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"

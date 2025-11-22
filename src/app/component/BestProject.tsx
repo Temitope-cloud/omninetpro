@@ -121,7 +121,7 @@ const BestProject = () => {
             <div className="relative z-10 space-y-6 p-8">
               <div className="flex items-center gap-2 text-sm font-semibold tracking-widest text-white/70 uppercase">
                 <Layers className="h-4 w-4" />
-                {featuredProject.category}
+                {featuredProject.category}``
               </div>
               <h3 className="text-3xl leading-tight font-bold md:text-4xl">
                 {featuredProject.title}

@@ -1,8 +1,81 @@
 import React from "react";
+import Script from "next/script";
+import { Metadata } from "next";
+import {
+  generateMetadata as generateSEOMetadata,
+  generateBreadcrumbSchema,
+} from "@/lib/seo";
+
+export const metadata: Metadata = generateSEOMetadata({
+  title: "Contact Us - Omninet Pro | Get in Touch",
+  description:
+    "Contact Omninet Pro for expert digital solutions. Reach out to our team in London, UK. Email us at support@omninetpro.com or call +1 (683) 333-5332. Let's transform your digital presence together.",
+  path: "/contact-us",
+  keywords: [
+    "contact omninet pro",
+    "digital agency contact",
+    "web development consultation",
+    "tech agency london",
+    "get quote",
+  ],
+});
 
 const ContactUs = () => {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "https://omninetpro.com" },
+    { name: "Contact Us", url: "https://omninetpro.com/contact-us" },
+  ]);
+
   return (
     <>
+      {/* Structured Data - Breadcrumbs */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      {/* Structured Data - LocalBusiness */}
+      <Script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Omninet Pro",
+            image: "https://omninetpro.com/logo.png",
+            "@id": "https://omninetpro.com",
+            url: "https://omninetpro.com",
+            telephone: "+1-683-333-5332",
+            email: "support@omninetpro.com",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Westferry Circus, 4HD",
+              addressLocality: "London",
+              addressCountry: "GB",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 51.5074,
+              longitude: -0.1278,
+            },
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+              ],
+              opens: "09:00",
+              closes: "18:00",
+            },
+          }),
+        }}
+      />
       {/* Contact */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto mb-6 max-w-2xl text-center sm:mb-10">
@@ -15,7 +88,7 @@ const ContactUs = () => {
           <div className="aspect-w-16 aspect-h-6 lg:aspect-h-14 overflow-hidden rounded-2xl bg-gray-100">
             <img
               className="rounded-2xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105"
-              src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://img.freepik.com/premium-photo/young-businesswoman-answering-phone-calls-desk_236854-53497.jpg?w=1060"
               alt="Contacts Image"
             />
           </div>
@@ -83,7 +156,7 @@ const ContactUs = () => {
                     <p className="text-sm text-gray-600">Email us</p>
                     <p>
                       <a
-                        className="relative inline-block font-medium text-black before:absolute before:start-0 before:bottom-0.5 before:-z-1 before:h-1 before:w-full before:bg-purple-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black"
+                        className="relative inline-block font-medium text-black before:absolute before:start-0 before:bottom-0.5 before:-z-1 before:h-1 before:w-full before:bg-[#21178f] hover:before:bg-black focus:outline-hidden focus:before:bg-black"
                         href="mailto:example@site.so"
                       >
                         support@omninetpro.com
@@ -97,7 +170,7 @@ const ContactUs = () => {
                     <p className="text-sm text-gray-600">Whatsapp</p>
                     <p>
                       <a
-                        className="relative inline-block font-medium text-black before:absolute before:start-0 before:bottom-0.5 before:-z-1 before:h-1 before:w-full before:bg-purple-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black"
+                        className="relative inline-block font-medium text-black before:absolute before:start-0 before:bottom-0.5 before:-z-1 before:h-1 before:w-full before:bg-[#21178f] hover:before:bg-black focus:outline-hidden focus:before:bg-black"
                         href="mailto:example@site.so"
                       >
                         +1 (683) 333-5332

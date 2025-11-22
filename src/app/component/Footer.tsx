@@ -107,10 +107,11 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-16 lg:px-24">
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Company Info */}
-          <div className="space-y-4 lg:col-span-2">
-            <h3 className="text-background text-2xl font-bold uppercase">
-              OmninetPro
-            </h3>
+          <div
+            className="cursor-pointer space-y-4 lg:col-span-2"
+            onClick={() => router.push("/")}
+          >
+            <img src="/logo-white.png" alt="logo" width={300} height={350} />
 
             <p className="text-muted-foreground max-w-sm leading-relaxed">
               We know how important customer experience is for a business.

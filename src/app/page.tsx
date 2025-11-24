@@ -14,17 +14,25 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Omninet Pro - Modern Tech Agency | Web Development & Digital Solutions",
+  title: "Omninet Pro - E-commerce Solutions | Online Store Setup & Optimization",
   description:
-    "Transform your digital presence with Omninet Pro. We offer premium web development, brand design, e-commerce solutions, SEO, and digital marketing services. Expert team delivering modern, high-performance digital solutions.",
+    "Transform your e-commerce business with Omninet Pro. We create, revamp, and optimize online stores with complete setup, design, branding, SEO, marketing, and conversion optimization. Expert team delivering high-performing e-commerce solutions.",
   path: "/",
   keywords: [
-    "e-commerce development",
-    "store setup",
-    "brand design",
-    "SEO services",
-    "digital marketing",
-    "web design agency",
+    "online store setup",
+    "e-commerce store creation",
+    "store revamping",
+    "shopify store setup",
+    "store design and branding",
+    "e-commerce optimization",
+    "store conversion optimization",
+    "product research",
+    "niche research",
+    "tiktok shop setup",
+    "instagram shop setup",
+    "facebook ads for e-commerce",
+    "abandoned cart recovery",
+    "e-commerce SEO",
   ],
 });
 

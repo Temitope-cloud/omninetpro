@@ -2,9 +2,9 @@ import { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://omninetpro.com";
 const siteName = "Omninet Pro";
-const defaultTitle = "Omninet Pro - Modern Tech Agency | Web Development & Digital Solutions";
+const defaultTitle = "Omninet Pro - E-commerce Solutions | Online Store Setup & Optimization";
 const defaultDescription =
-  "Omninet Pro is a premium tech agency offering web development, brand design, technical consulting, product strategy, and creative technology services. Transform your digital presence with our expert team.";
+  "Omninet Pro specializes in comprehensive e-commerce solutions. We create, revamp, and optimize online stores with store setup, design, branding, SEO, marketing, and conversion optimization. Transform your e-commerce business with our expert team.";
 
 interface SEOProps {
   title?: string;
@@ -33,15 +33,24 @@ export function generateMetadata({
   const imageUrl = image.startsWith("http") ? image : `${siteUrl}${image}`;
 
   const defaultKeywords = [
-    "web development",
-    "digital agency",
-    "tech consulting",
-    "brand design",
-    "product strategy",
     "e-commerce solutions",
-    "web design",
-    "digital transformation",
-    "creative technology",
+    "online store setup",
+    "shopify store setup",
+    "e-commerce store design",
+    "store revamping",
+    "e-commerce optimization",
+    "store branding",
+    "product research",
+    "niche research",
+    "store policies",
+    "e-commerce SEO",
+    "store conversion optimization",
+    "abandoned cart recovery",
+    "tiktok shop setup",
+    "instagram shop setup",
+    "facebook ads management",
+    "email marketing automation",
+    "e-commerce store management",
     "Omninet Pro",
   ];
 
@@ -110,7 +119,8 @@ export function generateOrganizationSchema() {
     name: siteName,
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
-    description: defaultDescription,
+    description:
+      "Omninet Pro specializes in comprehensive e-commerce solutions including online store setup, revamping, design, branding, SEO, marketing, and optimization services.",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-683-333-5332",
@@ -134,7 +144,8 @@ export function generateWebsiteSchema() {
     "@type": "WebSite",
     name: siteName,
     url: siteUrl,
-    description: defaultDescription,
+    description:
+      "Omninet Pro - Expert e-commerce solutions for online store setup, revamping, optimization, and marketing. Transform your e-commerce business with our comprehensive services.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -150,7 +161,7 @@ export function generateServiceSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Digital Agency Services",
+    serviceType: "E-commerce Solutions",
     provider: {
       "@type": "Organization",
       name: siteName,
@@ -161,38 +172,38 @@ export function generateServiceSchema() {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Digital Services",
+      name: "E-commerce Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Web Development",
-            description: "Custom web development and web applications",
+            name: "Store Setup & Research",
+            description: "Niche research, brand research, product research, and product listing optimization for e-commerce stores",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Brand Design",
-            description: "Complete brand identity and design services",
+            name: "Store Design & Branding",
+            description: "Theme importation and customization, full store design, branded checkout customization, and favicon creation",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Technical Consulting",
-            description: "Expert technical consulting and strategy",
+            name: "Store Policies & Verification",
+            description: "Store policies setup, licensing and store verification, trusted site and trust badge integration",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "E-commerce Solutions",
-            description: "Complete e-commerce store setup and optimization",
+            name: "Store Optimization",
+            description: "Website speed optimization, UI/UX and conversion optimization, one-page checkout setup, and abandoned checkout recovery",
           },
         },
         {
@@ -200,7 +211,7 @@ export function generateServiceSchema() {
           itemOffered: {
             "@type": "Service",
             name: "SEO & Content",
-            description: "Search engine optimization and content creation",
+            description: "Search engine optimization, meta description optimization, blog post creation, and sitemap setup for e-commerce stores",
           },
         },
         {
@@ -208,7 +219,7 @@ export function generateServiceSchema() {
           itemOffered: {
             "@type": "Service",
             name: "Marketing & Ads",
-            description: "Digital marketing and advertising management",
+            description: "Email campaign setup and automation, TikTok Shop setup and management, TikTok ads management, Instagram Shop setup, and Facebook ads management",
           },
         },
       ],

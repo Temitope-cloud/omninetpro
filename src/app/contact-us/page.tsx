@@ -7,16 +7,18 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Contact Us - Omninet Pro | Get in Touch",
+  title: "Contact Us - Omninet Pro | Get Your E-commerce Store Started",
   description:
-    "Contact Omninet Pro for expert digital solutions. Reach out to our team in London, UK. Email us at support@omninetpro.com or call +1 (683) 333-5332. Let's transform your digital presence together.",
+    "Contact Omninet Pro for expert e-commerce solutions. Get help with online store setup, revamping, optimization, and marketing. Reach out to our team in London, UK. Email us at support@omninetpro.com or call +1 (683) 333-5332. Let's transform your e-commerce business together.",
   path: "/contact-us",
   keywords: [
     "contact omninet pro",
-    "digital agency contact",
-    "web development consultation",
-    "tech agency london",
-    "get quote",
+    "e-commerce consultation",
+    "store setup consultation",
+    "get quote for online store",
+    "e-commerce agency london",
+    "shopify store help",
+    "store revamping consultation",
   ],
 });
 

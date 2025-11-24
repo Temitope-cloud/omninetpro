@@ -7,6 +7,13 @@ const OurTeam = () => {
   const router = useRouter();
   const teams = [
     {
+      image: "/teams/1.jpg",
+      title: "Digital Dynamo",
+      subtitle: " Versatile Marketing Strategist",
+      about:
+        "Focused on building strong marketing strategy for e-commerce growth.",
+    },
+    {
       image: "/teams/2.jpg",
       title: "Heritage",
       subtitle: "Brand Developer",
@@ -29,6 +36,13 @@ const OurTeam = () => {
       title: "John Leni",
       subtitle: "Market Analyst",
       about: "Analyzes markets to uncover winning opportunities.",
+    },
+    {
+      image: "/teams/6.jpg",
+      title: "Kennex",
+      subtitle: "Content and copywriting Expert",
+      about:
+        "Creates engaging content and copy that converts visitors into buyers.",
     },
 
     {

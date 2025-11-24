@@ -8,15 +8,17 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "About Us - Omninet Pro | Our Mission & Vision",
+  title: "About Us - Omninet Pro | E-commerce Solutions Team",
   description:
-    "Learn about Omninet Pro's mission to deliver cutting-edge digital solutions. We create clean, conversion-focused experiences that help businesses launch fast, scale confidently, and succeed online.",
+    "Learn about Omninet Pro's mission to deliver comprehensive e-commerce solutions. We create, revamp, and optimize online stores with store setup, design, branding, SEO, and marketing services. Expert team helping e-commerce businesses launch fast and scale confidently.",
   path: "/about-us",
   keywords: [
     "about omninet pro",
-    "tech agency mission",
-    "digital transformation company",
-    "web development team",
+    "e-commerce solutions team",
+    "online store experts",
+    "e-commerce agency mission",
+    "store setup specialists",
+    "e-commerce optimization team",
     "our vision",
   ],
 });

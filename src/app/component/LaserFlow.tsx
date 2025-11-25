@@ -75,7 +75,7 @@ export function LaserFlowBoxExample() {
       </div>
 
       <div
-        className="bg-[url(/shopify-dash.png)] bg-cover"
+        className="bg-[url(/bg-pro.jpeg)] bg-cover"
         style={{
           position: "absolute",
           top: "50%",

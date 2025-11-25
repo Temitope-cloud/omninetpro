@@ -245,7 +245,7 @@ const TeamConnectGrid = ({ members, showHireBanner = true }: Props) => {
 
               <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
                 <p className="text-sm text-gray-600">
-                  Enter {member.name}&apos;s code to request a collaboration.
+                  Enter {member.name}&apos;s code to verify your identity.
                 </p>
                 <div className="mt-3 flex flex-col gap-2 sm:flex-row">
                   <input

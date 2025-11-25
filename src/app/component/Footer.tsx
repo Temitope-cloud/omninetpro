@@ -39,7 +39,7 @@ const Footer = () => {
     { name: "Whatsapp", href: "https://wa.me/16833335332" },
     { name: "Instagram", href: "https://www.instagram.com/proomninet" },
     { name: "TikTok", href: "www.tiktok.com/@omninetpro" },
-    { name: "Telegram", href: "t.me/john123697" },
+    { name: "Telegram", href: "https://t.me/taiwo129008" },
   ];
 
   const socialLinks = [

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Check } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const FOUNDER_CODE = "101011";
 const FOUNDER_ID = "founder";
@@ -18,6 +19,7 @@ const FounderSpotlight = () => {
   const [formState, setFormState] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
+  const resetTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const resetForm = () => {
     setVisitorEmail("");
@@ -29,7 +31,7 @@ const FounderSpotlight = () => {
     if (codeInput.trim() === FOUNDER_CODE) {
       setStatus({
         state: "verified",
-        message: "Code confirmed. Send a note to the founder.",
+        message: undefined,
       });
     } else {
       setStatus({
@@ -62,12 +64,31 @@ const FounderSpotlight = () => {
 
       setFormState("success");
       setCodeInput("");
-      setStatus({ state: "idle" });
+      setStatus({
+        state: "verified",
+        message: "Code verified and your note is on the way.",
+      });
       resetForm();
+
+      if (resetTimeoutRef.current) {
+        clearTimeout(resetTimeoutRef.current);
+      }
+      resetTimeoutRef.current = setTimeout(() => {
+        setFormState("idle");
+        setStatus({ state: "idle" });
+      }, 2500);
     } catch (error) {
       setFormState("error");
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (resetTimeoutRef.current) {
+        clearTimeout(resetTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section className="mx-auto mt-10 mb-16 max-w-5xl rounded-3xl border border-gray-200 bg-white px-6 py-10 shadow-[0_20px_65px_rgba(15,23,42,.08)] sm:px-10 sm:py-12">
@@ -93,7 +114,7 @@ const FounderSpotlight = () => {
 
           <div className="mt-6 space-y-3 rounded-2xl border border-gray-200 bg-gray-50 p-4">
             <p className="text-sm font-medium text-gray-700">
-              Verify the founder&apos;s access code
+              Enter the founder&apos;s private code
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
               <input
@@ -113,7 +134,7 @@ const FounderSpotlight = () => {
                 onClick={handleVerify}
                 className="inline-flex cursor-pointer items-center justify-center rounded-xl bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-700"
               >
-                Verify code
+                Continue
               </button>
             </div>
             {status.message && (
@@ -140,8 +161,8 @@ const FounderSpotlight = () => {
           <h4 className="mt-1 text-lg font-semibold text-gray-900">
             {/* Show a message if and after verification */}
             {status.state === "verified"
-              ? "Share your email and note."
-              : "Verify the founder's access code"}
+              ? "Send your email and note."
+              : "Enter the founder's private code"}
           </h4>
 
           <div className="mt-5 space-y-4">
@@ -187,7 +208,7 @@ const FounderSpotlight = () => {
 
             {formState === "success" && (
               <p className="text-sm text-emerald-600">
-                Sent! You’ll receive a confirmation shortly.
+                Code verified and delivered to the founder. Check your inbox.
               </p>
             )}
             {formState === "error" && (
@@ -198,12 +219,19 @@ const FounderSpotlight = () => {
 
             <button
               type="submit"
-              disabled={
-                status.state !== "verified" || formState === "submitting"
-              }
-              className="inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-700 disabled:cursor-not-allowed disabled:bg-gray-400"
+              disabled={formState === "submitting"}
+              className={`inline-flex w-full items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-white transition ${
+                formState === "success"
+                  ? "bg-emerald-600 hover:bg-emerald-600"
+                  : "bg-gray-900 hover:bg-gray-700"
+              } disabled:cursor-not-allowed disabled:bg-gray-400`}
             >
-              {formState === "submitting" ? "Sending..." : "Send message"}
+              {formState === "success" && <Check className="mr-2 h-4 w-4" />}
+              {formState === "submitting"
+                ? "Verifying..."
+                : formState === "success"
+                  ? "Verified"
+                  : "Verify code"}
             </button>
           </div>
         </form>

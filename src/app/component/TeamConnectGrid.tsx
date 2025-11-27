@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, X } from "lucide-react";
+import { Check, ExternalLink, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { FormEvent, useEffect, useRef, useState } from "react";
 
@@ -135,7 +135,7 @@ const TeamConnectGrid = ({ members, showHireBanner = true }: Props) => {
           [member.id]: {
             ...current,
             status: "success",
-            message: "Code verified. Complete the request below.",
+            message: undefined,
             attempts: 0,
             lockedUntil: null,
           },
@@ -188,8 +188,22 @@ const TeamConnectGrid = ({ members, showHireBanner = true }: Props) => {
       setFormStatus({
         state: "success",
         message:
-          "Request sent successfully. Check your inbox for a confirmation email.",
+          "Code verified and your request has been sent. Check your inbox for confirmation.",
       });
+
+      setCardStates((prev) => ({
+        ...prev,
+        [selectedMember.id]: {
+          ...(prev[selectedMember.id] ?? {
+            codeInput: "",
+            status: "idle",
+            attempts: 0,
+            lockedUntil: null,
+          }),
+          status: "success",
+          message: "Code verified and request delivered.",
+        },
+      }));
 
       if (successTimeoutRef.current) {
         clearTimeout(successTimeoutRef.current);
@@ -269,7 +283,7 @@ const TeamConnectGrid = ({ members, showHireBanner = true }: Props) => {
                     }
                     className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-700 disabled:cursor-not-allowed disabled:bg-gray-400"
                   >
-                    Verify code
+                    Continue
                   </button>
                 </div>
                 {state?.message && (
@@ -386,11 +400,20 @@ const TeamConnectGrid = ({ members, showHireBanner = true }: Props) => {
                 <button
                   type="submit"
                   disabled={formStatus.state === "submitting"}
-                  className="inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-700 disabled:cursor-not-allowed disabled:bg-gray-400"
+                  className={`inline-flex w-full items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-white transition ${
+                    formStatus.state === "success"
+                      ? "bg-emerald-600 hover:bg-emerald-600"
+                      : "bg-gray-900 hover:bg-gray-700"
+                  } disabled:cursor-not-allowed disabled:bg-gray-400`}
                 >
+                  {formStatus.state === "success" && (
+                    <Check className="mr-2 h-4 w-4" />
+                  )}
                   {formStatus.state === "submitting"
-                    ? "Sending..."
-                    : "Send request"}
+                    ? "Verifying..."
+                    : formStatus.state === "success"
+                      ? "Verified"
+                      : "Verify code"}
                 </button>
                 <button
                   type="button"

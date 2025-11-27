@@ -6,6 +6,12 @@ import { teamDirectory } from "@/lib/teamDirectory";
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const FROM_EMAIL =
   process.env.RESEND_FROM_EMAIL || "Omninet Pro <hello@omninetpro.com>";
+const founderProfile = {
+  id: "founder",
+  name: "Taiwo (Founder)",
+  email: process.env.FOUNDER_EMAIL || "support@omninetpro.com",
+  code: "101011",
+};
 
 const formatHtml = (content: string) => `
   <div style="font-family: 'Inter', Arial, sans-serif; line-height: 1.6; color: #0f172a;">
@@ -34,7 +40,8 @@ export async function POST(request: Request) {
       );
     }
 
-    const teamMember = teamDirectory[teamId];
+    const teamMember =
+      teamId === founderProfile.id ? founderProfile : teamDirectory[teamId];
 
     if (!teamMember) {
       return NextResponse.json(

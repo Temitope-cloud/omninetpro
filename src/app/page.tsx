@@ -8,6 +8,7 @@ import OurServices from "./component/OurServices";
 import HeroSectionTwo from "./component/HeroSectionTwo";
 import AboutUsSection from "./component/AboutUsSection";
 import OurTeam from "./component/OurTeam";
+import FounderSpotlight from "./component/FounderSpotlight";
 import {
   generateMetadata as generateSEOMetadata,
   generateServiceSchema,
@@ -56,6 +57,7 @@ const Home = () => {
 
       <BestProject />
       <OurServices />
+      <FounderSpotlight />
       <OurTeam />
     </>
   );

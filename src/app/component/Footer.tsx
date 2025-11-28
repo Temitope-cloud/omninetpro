@@ -13,6 +13,7 @@ import {
   MailCheck,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -38,7 +39,10 @@ const Footer = () => {
   const resources = [
     { name: "Whatsapp", href: "https://wa.me/16833335332" },
     // { name: "Instagram", href: "https://www.instagram.com/proomninet" },
-    { name: "TikTok", href: "www.tiktok.com/@omninetpro" },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@omninet_pro2?_r=1&_t=ZS-91mZJibc4bh",
+    },
     { name: "Telegram", href: "https://t.me/taiwo129008" },
   ];
 
@@ -149,22 +153,24 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Social Links */}
-            {/* <div className="flex items-center gap-4 pt-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="bg-muted/20 hover:bg-muted/40 hover:text-background flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                );
-              })}
-            </div> */}
+            {/* Shopify Partnership Badge */}
+            <div className="pt-6">
+              <a
+                href="https://www.shopify.com/partners"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+                aria-label="Certified Shopify Partner"
+              >
+                <Image
+                  src="/Certified-Shopify-Partner.png"
+                  alt="Certified Shopify Partner"
+                  width={120}
+                  height={120}
+                  className="h-auto w-24 transition-opacity hover:opacity-80"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Company */}
@@ -273,6 +279,12 @@ const Footer = () => {
                 className="text-muted-foreground hover:text-background transition-colors"
               >
                 Terms of Service
+              </Link>
+              <Link
+                href="#"
+                className="text-muted-foreground hover:text-background transition-colors"
+              >
+                Refund Policy
               </Link>
               <Link
                 href="#"

@@ -13,6 +13,7 @@ import {
   MailCheck,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -150,6 +151,25 @@ const Footer = () => {
                   4HD, London.
                 </span>
               </div>
+            </div>
+
+            {/* Shopify Partnership Badge */}
+            <div className="pt-6">
+              <a
+                href="https://www.shopify.com/partners"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+                aria-label="Certified Shopify Partner"
+              >
+                <Image
+                  src="/Certified-Shopify-Partner.png"
+                  alt="Certified Shopify Partner"
+                  width={120}
+                  height={120}
+                  className="h-auto w-24 transition-opacity hover:opacity-80"
+                />
+                  </a>
             </div>
           </div>
 

@@ -36,7 +36,7 @@ const Footer = () => {
   ];
 
   const resources = [
-    { name: "Whatsapp", href: "https://wa.me/16833335332" },
+    { name: "Whatsapp", href: "https://wa.me/13434379614" },
     // { name: "Instagram", href: "https://www.instagram.com/proomninet" },
     {
       name: "TikTok",

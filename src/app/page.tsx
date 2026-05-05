@@ -9,7 +9,6 @@ import HeroSectionTwo from "./component/HeroSectionTwo";
 import AboutUsSection from "./component/AboutUsSection";
 import OurTeam from "./component/OurTeam";
 import FounderSpotlight from "./component/FounderSpotlight";
-import RefundGuarantee from "./component/RefundGuarantee";
 import {
   generateMetadata as generateSEOMetadata,
   generateServiceSchema,
@@ -60,7 +59,6 @@ const Home = () => {
       <OurServices />
       <FounderSpotlight />
       <OurTeam />
-      <RefundGuarantee />
     </>
   );
 };

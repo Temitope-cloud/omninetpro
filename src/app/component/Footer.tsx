@@ -13,7 +13,6 @@ import {
   MailCheck,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -137,10 +136,10 @@ const Footer = () => {
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="text-muted-foreground h-4 w-4 shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+13434379614"
                   className="hover:text-background transition-colors"
                 >
-                  +1 (683) 333-5332
+                  +1 (343) 437-9614
                 </a>
               </div>
               <div className="flex items-start gap-3 text-sm">
@@ -153,24 +152,22 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Shopify Partnership Badge */}
-            <div className="pt-6">
-              <a
-                href="https://www.shopify.com/partners"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block"
-                aria-label="Certified Shopify Partner"
-              >
-                <Image
-                  src="/Certified-Shopify-Partner.png"
-                  alt="Certified Shopify Partner"
-                  width={120}
-                  height={120}
-                  className="h-auto w-24 transition-opacity hover:opacity-80"
-                />
+            {/* Social Links */}
+            {/* <div className="flex items-center gap-4 pt-4">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="bg-muted/20 hover:bg-muted/40 hover:text-background flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300"
+                  >
+                    <Icon className="h-4 w-4" />
                   </a>
-            </div>
+                );
+              })}
+            </div> */}
           </div>
 
           {/* Company */}

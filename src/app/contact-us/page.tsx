@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = generateSEOMetadata({
   title: "Contact Us - Omninet Pro | Get Your E-commerce Store Started",
   description:
-    "Contact Omninet Pro for expert e-commerce solutions. Get help with online store setup, revamping, optimization, and marketing. Reach out to our team in London, UK. Email us at support@omninetpro.com or call +1 (683) 333-5332. Let's transform your e-commerce business together.",
+    "Contact Omninet Pro for expert e-commerce solutions. Get help with online store setup, revamping, optimization, and marketing. Reach out to our team in London, UK. Email us at support@omninetpro.com or call  +1 (343) 437-9614. Let's transform your e-commerce business together.",
   path: "/contact-us",
   keywords: [
     "contact omninet pro",
@@ -175,7 +175,7 @@ const ContactUs = () => {
                         className="relative inline-block font-medium text-black before:absolute before:start-0 before:bottom-0.5 before:-z-1 before:h-1 before:w-full before:bg-[#21178f] hover:before:bg-black focus:outline-hidden focus:before:bg-black"
                         href="mailto:example@site.so"
                       >
-                        +1 (683) 333-5332
+                        +1 (343) 437-9614
                       </a>
                     </p>
                   </div>
